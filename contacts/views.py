@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from .models import Contact
 
 from .utils import Util
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Create your views here.
 
@@ -12,6 +13,7 @@ class ContactCreateView(CreateView):
     model = Contact
     template_name = 'index.html'
     fields = ['name', 'email', 'subject', 'message']
+    success_message = "%(name)s, sent message successfully"
 
     def form_valid(self, form):
         # form.instance.created_by = self.request.user

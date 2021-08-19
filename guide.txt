@@ -1,0 +1,13 @@
+# create django project 
+create a folder for your project
+run the following command 
+django-admin startproject config .
+
+# to start an application
+run the following command 
+python manage.py cv/anyname of your choice
+
+#freeze requirement.txt 
+pipenv run pip freeze > requirements.txt
+
+
